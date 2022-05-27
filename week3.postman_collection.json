@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "180cd00e-d12b-4246-9c3b-9a6e75f9da7c",
+		"name": "week3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19856868"
+	},
+	"item": [
+		{
+			"name": "取得全部貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://guarded-depths-89631.herokuapp.com/rooms",
+					"protocol": "https",
+					"host": [
+						"guarded-depths-89631",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增一筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"testRoom 2\",\r\n    \"price\": 4000,\r\n    \"rating\": 4.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://guarded-depths-89631.herokuapp.com/rooms",
+					"protocol": "https",
+					"host": [
+						"guarded-depths-89631",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://morning-headland-54052.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"morning-headland-54052",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://morning-headland-54052.herokuapp.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"morning-headland-54052",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62910c191a9fd459ed3dcd7c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯一筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"XXX2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://morning-headland-54052.herokuapp.com/posts/:id",
+					"protocol": "https",
+					"host": [
+						"morning-headland-54052",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "62910c201a9fd459ed3dcd80"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
