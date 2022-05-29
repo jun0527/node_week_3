@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   const post = await Post.find({});
-  console.log(post);
   res.status(200).json({
     'status': 'success',
     'data': post,
