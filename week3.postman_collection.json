@@ -12,15 +12,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://guarded-depths-89631.herokuapp.com/rooms",
+					"raw": "https://morning-headland-54052.herokuapp.com/posts",
 					"protocol": "https",
 					"host": [
-						"guarded-depths-89631",
+						"morning-headland-54052",
 						"herokuapp",
 						"com"
 					],
 					"path": [
-						"rooms"
+						"posts"
 					]
 				}
 			},
@@ -33,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"testRoom 2\",\r\n    \"price\": 4000,\r\n    \"rating\": 4.5\r\n}",
+					"raw": "{\r\n    \"name\": \"XXX\",\r\n    \"content\": \"今天天氣很好\",\r\n    \"image\": \"\",\r\n    \"likes\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,15 +41,15 @@
 					}
 				},
 				"url": {
-					"raw": "https://guarded-depths-89631.herokuapp.com/rooms",
+					"raw": "https://morning-headland-54052.herokuapp.com/posts",
 					"protocol": "https",
 					"host": [
-						"guarded-depths-89631",
+						"morning-headland-54052",
 						"herokuapp",
 						"com"
 					],
 					"path": [
-						"rooms"
+						"posts"
 					]
 				}
 			},
