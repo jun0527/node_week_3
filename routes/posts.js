@@ -34,20 +34,30 @@ router.delete('/', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   const id = req.params.id;
   const newPost = await Post.findByIdAndDelete(id);
-  res.status(200).json({
-    'status': 'success',
-    'data': await Post.find(),
-  })
+  if (newPost === null) {
+    errHandle(res, 400);
+  } else {
+    res.status(200).json({
+      'status': 'success',
+      'data': await Post.find(),
+    })
+  }
 })
 router.patch('/:id', async (req, res) => {
   try {
     const data = req.body;
     const id = req.params.id;
-    const newPost = await Post.findByIdAndUpdate(id, data);
-    res.status(200).json({
-      'status': 'success',
-      'data': await Post.find(),
-    })
+    const newPost = await Post.findByIdAndUpdate(id, data, {
+      runValidators: true
+    });
+    if (newPost === null) {
+      errHandle(res, 400);
+    } else {
+      res.status(200).json({
+        'status': 'success',
+        'data': await Post.find(),
+      })
+    }
   } catch(err) {
     console.log(err);
     errHandle(res, 400);
